@@ -1,0 +1,30 @@
+cloud:
+  list:
+  - key: 1
+  - key: 1
+  # Cloud Name: The cloud name must not contain spaces or special
+  # characters. The name is used for the OpenStack region name. The
+  # default value for the ICOS Hybrid cloud is RegionTwo.
+  name: RegionTwo
+  # Cloud Description
+  description: ICOS Hybrid - Controller + N Compute Topology - x86 KVM
+  # Cloud Administrator (admin) User's Password. For the ICOS Hybrid
+  # cloud, the cloud administrator user's password is contained in the
+  # password JSON file. It can be overridden here if needed.
+  password: test
+  # Cloud Password JSON File. This is required for the ICOS Hybrid cloud.
+  # Copy the example password file for the ICOS Hybrid cloud located in
+  # the ICM chef-repo to the deployment folder, rename it, and set the
+  # password values in the file for the on premise admin user and services
+  # required for the ICOS Hybrid cloud. Enter the fully qualified path and
+  # file name of that password file here.
+  password_file: YOUR_PASSWORD_FILE
+  # Cloud Database Service Type: db2, mariadb or mysql
+  database_service_type: db2
+  # Cloud Messaging Service Type: rabbitmq or qpid
+  messaging_service_type: rabbitmq
+  features:
+    self_service_portal: disabled
+    platform_resource_scheduler: enabled
+    icos_hybrid_cloud: enabled
+    fips_compliance: enabled
