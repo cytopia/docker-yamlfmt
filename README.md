@@ -30,7 +30,7 @@
 > [terraform-docs][tfdocs-git-lnk] **•**
 > [terragrunt][tg-git-lnk] **•**
 > [terragrunt-fmt][tgfmt-git-lnk] **•**
-> [yamlfmt][yfmt-git-lnk]
+> [yamlfmt][yfmt-git-lnk] **•**
 > [yamllint][ylint-git-lnk]
 
 > #### All [#awesome-ci](https://github.com/topics/awesome-ci) Makefiles
