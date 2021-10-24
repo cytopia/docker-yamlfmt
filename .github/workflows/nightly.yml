@@ -28,7 +28,7 @@ jobs:
         version:
           - 'latest'
         refs:
-          - '0.2'
+          - '0.3'
           - 'master'
     steps:
 
