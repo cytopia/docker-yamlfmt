@@ -1,15 +1,13 @@
 # Docker image for `yamlfmt`
 
 [![Tag](https://img.shields.io/github/tag/cytopia/docker-yamlfmt.svg)](https://github.com/cytopia/docker-yamlfmt/releases)
-[![](https://images.microbadger.com/badges/version/cytopia/yamlfmt:latest.svg?&kill_cache=1)](https://microbadger.com/images/cytopia/yamlfmt:latest "yamlfmt")
-[![](https://images.microbadger.com/badges/image/cytopia/yamlfmt:latest.svg?&kill_cache=1)](https://microbadger.com/images/cytopia/yamlfmt:latest "yamlfmt")
-[![](https://img.shields.io/docker/pulls/cytopia/yamlfmt.svg)](https://hub.docker.com/r/cytopia/yamlfmt)
 [![](https://img.shields.io/badge/github-cytopia%2Fdocker--yamlfmt-red.svg)](https://github.com/cytopia/docker-yamlfmt "github.com/cytopia/docker-yamlfmt")
 [![License](https://img.shields.io/badge/license-MIT-%233DA639.svg)](https://opensource.org/licenses/MIT)
 
 [![lint](https://github.com/cytopia/docker-yamlfmt/workflows/lint/badge.svg)](https://github.com/cytopia/docker-yamlfmt/actions?query=workflow%3Alint)
 [![build](https://github.com/cytopia/docker-yamlfmt/workflows/build/badge.svg)](https://github.com/cytopia/docker-yamlfmt/actions?query=workflow%3Abuild)
 [![nightly](https://github.com/cytopia/docker-yamlfmt/workflows/nightly/badge.svg)](https://github.com/cytopia/docker-yamlfmt/actions?query=workflow%3Anightly)
+
 
 > #### All [#awesome-ci](https://github.com/topics/awesome-ci) Docker images
 >
@@ -41,41 +39,61 @@
 > [yamlfmt][yfmt-git-lnk] **•**
 > [yamllint][ylint-git-lnk]
 
-> #### All [#awesome-ci](https://github.com/topics/awesome-ci) Makefiles
->
-> Visit **[cytopia/makefiles](https://github.com/cytopia/makefiles)** for seamless project integration, minimum required best-practice code linting and CI.
+View **[Dockerfiles](https://github.com/cytopia/docker-yamlfmt/blob/master/Dockerfiles/)** on GitHub.
 
-View **[Dockerfile](https://github.com/cytopia/docker-yamlfmt/blob/master/Dockerfile)** on GitHub.
 
-[![Docker hub](http://dockeri.co/image/cytopia/yamlfmt?&kill_cache=1)](https://hub.docker.com/r/cytopia/yamlfmt)
+**Available Architectures:**  `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6`
 
 Tiny Alpine-based dockerized version of [yamlfmt](https://github.com/mmlb/yamlfmt)<sup>[1]</sup>.
 The image is built nightly against the latest stable version of `yamlfmt` and pushed to Dockerhub.
 
 <sup>[1] Official project: https://github.com/mmlb/yamlfmt</sup>
 
+## :whale: Available Docker image versions
 
-## Available Docker image versions
+[![](https://img.shields.io/docker/pulls/cytopia/yamlfmt.svg)](https://hub.docker.com/r/cytopia/yamlfmt)
+[![Docker](https://badgen.net/badge/icon/:latest?icon=docker&label=cytopia/yamlfmt)](https://hub.docker.com/r/cytopia/yamlfmt)
 
-| Docker tag | Build from |
-|------------|------------|
-| `latest`   | Current stable yamlfmt version |
+#### Rolling releaess
+
+The following Docker image tags are rolling releases and are built and updated every night.
+
+[![nightly](https://github.com/cytopia/docker-yamlfmt/workflows/nightly/badge.svg)](https://github.com/cytopia/docker-yamlfmt/actions?query=workflow%3Anightly)
 
 
-## Docker mounts
+| Docker Tag           | Git Ref   | Yamlfmt      | Flavour | Available Architectures                      |
+|----------------------|-----------|--------------|---------|----------------------------------------------|
+| `latest`             | master    | latest       | default | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6` |
+
+#### Point in time releases
+
+The following Docker image tags are built once and can be used for reproducible builds. Its version never changes so you will have to update tags in your pipelines from time to time in order to stay up-to-date.
+
+[![build](https://github.com/cytopia/docker-yamlfmt/workflows/build/badge.svg)](https://github.com/cytopia/docker-yamlfmt/actions?query=workflow%3Abuild)
+
+
+| Docker Tag           | Git Ref      | Yamlfmt      | Flavour | Available Architectures                      |
+|----------------------|--------------|--------------|---------|----------------------------------------------|
+| `latest-<tag>`       | tag: `<tag>` | latest       | default | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6` |
+
+Where `<tag>` refers to the chosen git tag from this repository.
+
+
+## :open_file_folder: Docker mounts
 
 The working directory inside the Docker container is **`/data/`** and should be mounted locally to
-the root of your project where your `.yamlfmt` file is located.
+the root of your project.
 
 
-## Usage
+## :computer: Usage
 
 ```bash
 docker run --rm -v $(pwd):/data cytopia/yamlfmt .
 ```
 
 
-## Related [#awesome-ci](https://github.com/topics/awesome-ci) projects
+
+## :arrows_counterclockwise: Related [#awesome-ci](https://github.com/topics/awesome-ci) projects
 
 ### Docker images
 
@@ -229,7 +247,8 @@ Visit **[cytopia/makefiles](https://github.com/cytopia/makefiles)** for dependen
 The provided Makefiles will only require GNU Make and Docker itself removing the need to install anything else.
 
 
-## License
+## :page_facing_up: License
+
 
 **[MIT License](LICENSE)**
 
