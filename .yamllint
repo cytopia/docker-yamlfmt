@@ -1,0 +1,14 @@
+---
+extends: default
+
+ignore: |
+  .yamllint
+  tests/*
+
+
+rules:
+  truthy:
+    allowed-values: ['true', 'false']
+    check-keys: False
+    level: error
+  line-length: disable
